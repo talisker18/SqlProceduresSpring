@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+spring:
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+      ddl-auto: update
+    properties:
+      hibernate:
+        generate_statistics: 'true'
+    show-sql: 'true'
+  datasource:
+    password: dunpeal87
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/sql_procedures_demo?serverTimezone=Europe/Rome
+  h2:
+    console:
+      enabled: 'true'
+#some:
+#  config: 'some config'
+logging:
+  level:
+    org:
+      hibernate:
+        stat: debug
+        type: trace
